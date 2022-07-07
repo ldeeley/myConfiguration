@@ -1,0 +1,38 @@
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ldeeley/myConfiguration.git
+          default-label: master
+
+  profile:
+    message: Welcome to the Test Environment
+
+server:
+  port: 8888
+
+my:
+  greeting: "Hello no profile set"
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+my:
+  greeting: "Hello from DEV"
+---
+spring:
+  config:
+    activate:
+      on-profile: staging
+my:
+  greeting: "Hello from Staging"
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+my:
+  greeting: "Hello from Production"
