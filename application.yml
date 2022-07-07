@@ -11,7 +11,7 @@ spring:
     message: Welcome to the Config Server
 
 server:
-  port: 8888
+  port: 8080
 
 my:
   greeting: "Hello no profile set"
