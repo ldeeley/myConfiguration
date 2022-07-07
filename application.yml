@@ -8,7 +8,7 @@ spring:
           default-label: master
 
   profile:
-    message: Welcome to the Config Server Environment
+    message: Welcome to the Config Server
 
 server:
   port: 8888
